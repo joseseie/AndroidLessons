@@ -7,6 +7,7 @@ public class Main extends Activity {
 
     protected void onCreate(Bundle save) {
         super.onCreate(save);
+        setContentView(R.layout.main);
     }
 
 
