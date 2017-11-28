@@ -13,9 +13,7 @@ public class Main extends Activity {
     }
 
     public static void cliquei(View v) {
-
         Log.i("Ola","Eu passei por aqui.");
-
     }
 
 
