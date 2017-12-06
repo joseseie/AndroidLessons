@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="io.github.joseseie.layoutlinearlayout.MainActivity"
 
-    android:orientation="horizontal"
+    android:orientation="vertical"
 
     >
 
@@ -15,7 +15,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jose Seie!"
+        android:text="Espaco da memoria: suficiente"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="20px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,7 +26,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Segundo textView"
+        android:layout_marginLeft="20px"
+        android:text="Espaco em disco: suficiente"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:text="Conexao com a internet: ativa"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:text="Tipo de conexao: 3G"
 
         />
 
