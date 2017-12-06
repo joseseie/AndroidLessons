@@ -1,4 +1,12 @@
 
 <pessoa idade=20 nome="Seie">
 
+    <endereco>
+        <rua></rua>
+    </endereco>
+
+    <endereco>
+        <rua></rua>
+    </endereco>
+
 </pessoa>
