@@ -11,3 +11,15 @@ O Próprio nome já sugere, os componentes que estiverem contidos neste Layout, 
 ### Absolute Layout
 
 Os componentes neste Layout  possuem a posicao Absoluta, e possuem uma relacao com o eixo X e Y
+
+### Table Layout
+ 
+ Muito semelhante ao linear Layout, organiza tudo na vertical ou Horizontal, quando queremos que os componentes fiquem dispostos como se fosse linhas e colunas
+ 
+ 
+ ### Frame Layout
+ 
+ Eh o gerenciador de Layout mais simples, pode-se usar quando se quer que o objecto ocupe toda a tela
+
+
+
