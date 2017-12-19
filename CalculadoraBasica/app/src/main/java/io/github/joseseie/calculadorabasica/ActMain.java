@@ -49,9 +49,8 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener{
         {
             dlg.setMessage("Por favor preencha todos campos");
             dlg.setNeutralButton("Ok", null);
-            dlg.show();
-        }
-        else {
+
+        } else {
 
             double valor1 = Double.parseDouble(v1);
             double valor2 = Double.parseDouble(v2);
@@ -60,9 +59,10 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener{
 
             dlg.setMessage("O resultado eh: " + resultado);
             dlg.setNeutralButton("Ok", null);
-            dlg.show();
 
         }
+
+        dlg.show();
 
     }
 
