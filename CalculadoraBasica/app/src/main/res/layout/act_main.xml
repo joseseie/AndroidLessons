@@ -8,7 +8,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight=""
         android:text="@string/lblValor1"
 
         />
@@ -19,21 +18,18 @@
         android:id="@+id/edtValor1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight=""
         android:ems="10"
         android:inputType="numberDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight=""
         android:text="@string/lblValor2" />
 
     <EditText
         android:id="@+id/edtValor2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight=""
         android:ems="10"
         android:inputType="numberDecimal" />
 
@@ -41,6 +37,5 @@
         android:id="@+id/btnCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight=""
         android:text="@string/btnCalcular" />
 </LinearLayout>
