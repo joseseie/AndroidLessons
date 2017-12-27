@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExemploParametros</string>
+    <string name="ok">Ok</string>
+    <string name="fecher">Fechar</string>
 </resources>
