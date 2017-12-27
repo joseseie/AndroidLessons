@@ -19,7 +19,11 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
         edtValor = (EditText) findViewById(R.id.edtValor);
         btnOk = (Button) findViewById(R.id.btnOk);
 
+
     }
+
+//    public void onClick(View view)
+
 
     public void onClick(View v)
     {
@@ -28,6 +32,28 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
         it.putExtra("VALOR",edtValor.getText().toString());
 
         startActivity(it);
+
+
+        if(v == btnOk)
+        {
+            String item =  edtValor.getText().toString();
+
+//            item += " - " + supportInvalidateOptionsMenu();
+        }
+        else
+        {
+
+
+            if(v == btnEx)
+            {
+                if(adpDadaos.getCount() > 0){
+                    
+                }
+            }
+
+
+
+        }
 
 
     }

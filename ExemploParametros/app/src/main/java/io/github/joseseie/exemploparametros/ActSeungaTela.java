@@ -8,12 +8,17 @@ import android.view.*;
 public class ActSeungaTela extends AppCompatActivity {
 
     private EditText edtValor;
-    private Button btnOk;
+    private Button btnFechar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_seunga_tela);
+
+        edtValor = (EditText) findViewById(R.id.edtValor);
+        btnFechar = (Button) findViewById(R.id.btnFechar);
+
+        Bundle bundle = getIntent().getExtras();
 
 
 
