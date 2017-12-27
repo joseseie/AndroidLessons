@@ -1,5 +1,6 @@
 package io.github.joseseie.exemploparametros;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.*;
@@ -22,8 +23,11 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
 
     public void onClick(View v)
     {
-        
+        Intent it = new Intent(this,ActSeungaTela.class);
 
+        it.putExtra("VALOR",edtValor.getText().toString());
+
+        startActivity(it);
 
 
     }
