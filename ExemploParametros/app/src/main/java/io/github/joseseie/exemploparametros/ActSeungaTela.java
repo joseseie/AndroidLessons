@@ -2,9 +2,10 @@ package io.github.joseseie.exemploparametros;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.*;
 
-public class ActSeungaTela extends AppCompatActivity {
+public class ActSeungaTela extends AppCompatActivity implements View.OnClickListener {
 
     private EditText edtValor;
     private Button btnFechar;
@@ -17,6 +18,8 @@ public class ActSeungaTela extends AppCompatActivity {
         edtValor = (EditText) findViewById(R.id.edtValor);
         btnFechar = (Button) findViewById(R.id.btnFechar);
 
+        btnFechar.setOnClickListener(this);
+
         Bundle bundle = getIntent().getExtras();
 
         if(bundle.containsKey("VALOR"))
@@ -26,4 +29,10 @@ public class ActSeungaTela extends AppCompatActivity {
         }
 
     }
+
+    public void onClick(View v)
+    {
+        finish();
+    }
+
 }
