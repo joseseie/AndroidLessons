@@ -47,7 +47,7 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
             if(v == btnEx)
             {
                 if(adpDadaos.getCount() > 0){
-                    
+
                 }
             }
 
