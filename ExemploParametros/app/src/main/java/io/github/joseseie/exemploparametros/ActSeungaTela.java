@@ -18,6 +18,7 @@ public class ActSeungaTela extends AppCompatActivity implements View.OnClickList
         edtValor = (EditText) findViewById(R.id.edtValor);
         btnFechar = (Button) findViewById(R.id.btnFechar);
 
+        //Registo de evento
         btnFechar.setOnClickListener(this);
 
         Bundle bundle = getIntent().getExtras();

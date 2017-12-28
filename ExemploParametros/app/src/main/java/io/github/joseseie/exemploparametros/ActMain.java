@@ -17,6 +17,7 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.act_main);
 
 
+        //Registo  de evento
         btnOk.setOnClickListener(this);
 
         edtValor = (EditText) findViewById(R.id.edtValor);
