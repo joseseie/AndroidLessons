@@ -19,7 +19,11 @@ public class ActSeungaTela extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-
+        if(bundle.containsKey("VALOR"))
+        {
+            String valor = bundle.getString("VALOR");
+            edtValor.setText(valor);
+        }
 
     }
 }
