@@ -15,4 +15,8 @@ Directorio com as aulas de curso de Android Básico, onde os directorios vao sen
 
 #### 1.2. Emuladores
 
-- Semana 27 de Novembro de 2017 : Android Emulator - Nexus_One_API_24:5554
+- Semana 27 de Novembro de 2017 : `Android Emulator - Nexus_One_API_24:5554`
+- Semana 04 de Dezembro de 2017 : Android Emulator - Nexus_One_API_24:5554
+- Semana 11 de Dezembro de 2017 : Android Emulator - Nexus_One_API_24:5554
+- Semana 18 de Dezembro de 2017 : Android Emulator - Nexus_One_API_24:5554
+- Semana 25 de Dezembro de 2017 : Android Emulator - Nexus_One_API_24:5554
