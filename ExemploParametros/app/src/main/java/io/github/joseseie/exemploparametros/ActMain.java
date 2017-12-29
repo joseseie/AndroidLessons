@@ -27,11 +27,11 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
 
     public void onClick(View v)
     {
-        Intent it = new Intent(this,ActSeungaTela.class);
+        Intent it = new Intent(this,ActSeungaTela.class); //Abrindo outra tela
 
-        it.putExtra("VALOR", edtValor.getText().toString() );
+        it.putExtra("VALOR", edtValor.getText().toString() ); //Passando parametro para a tela
 
-        startActivity(it);
+        startActivity(it); //Iniciando a execucacao da tela.
 
     }
 

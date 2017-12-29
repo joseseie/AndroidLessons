@@ -21,9 +21,9 @@ public class ActSeungaTela extends AppCompatActivity implements View.OnClickList
         //Registo de evento
         btnFechar.setOnClickListener(this);
 
-        Bundle bundle = getIntent().getExtras();
+        Bundle bundle = getIntent().getExtras(); //Buscando a instancia Bundle com os dados de outra tela.
 
-        if(bundle.containsKey("VALOR"))
+        if(bundle.containsKey("VALOR")) //Verificando se esta chave foi passada por parametno
         {
             String valor = bundle.getString("VALOR");
             edtValor.setText(valor);
@@ -33,7 +33,7 @@ public class ActSeungaTela extends AppCompatActivity implements View.OnClickList
 
     public void onClick(View v)
     {
-        finish();
+        finish(); //Fechar a tela.
     }
 
 }
