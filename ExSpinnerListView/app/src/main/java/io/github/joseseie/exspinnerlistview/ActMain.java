@@ -6,7 +6,7 @@ import android.view.*;
 import android.widget.*;
 
 
-public class ActMain extends AppCompatActivity {
+public class ActMain extends AppCompatActivity implements View.OnClickListener {
 
     private EditText edtValor;
     private Spinner spnOpcoes;
@@ -26,5 +26,16 @@ public class ActMain extends AppCompatActivity {
         btnExcluir = (Button) findViewById(R.id.btnExcluir);
         lstDados = (ListView) findViewById(R.id.lsvDados);
 
+        btnExcluir.setOnClickListener(this);
+        btnAdicionar.setOnClickListener(this);
+
     }
+
+    @Override
+    public void onClick(View v)
+    {
+
+
+    }
+
 }
