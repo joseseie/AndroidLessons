@@ -14,6 +14,8 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
     private Button btnExcluir;
     private ListView lstDados;
 
+    private ArrayAdapter<String> adpOpcoes;
+    private ArrayAdapter<String> adpDados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,18 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
         btnExcluir.setOnClickListener(this);
         btnAdicionar.setOnClickListener(this);
 
+
+        adpOpcoes = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
+        adpOpcoes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnOpcoes.setAdapter(adpOpcoes);
+
+        adpDados.add("Opcao 1");
+        adpDados.add("Opcao 2");
+        adpDados.add("Opcao 3");
+        adpDados.add("Opcao 4");
+
+        adpDados = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        lstDados.setAdapter(adpDados);
     }
 
     @Override
