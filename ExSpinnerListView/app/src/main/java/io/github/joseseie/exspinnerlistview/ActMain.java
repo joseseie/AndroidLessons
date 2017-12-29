@@ -48,7 +48,27 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v)
     {
+        if(v == btnAdicionar)
+        {
+            String item = edtValor.getText().toString();
 
+            item += " - " + spnOpcoes.getSelectedItem();
+
+            adpDados.add(item);
+
+        }
+        else
+        {
+            if(v == btnExcluir)
+            {
+                if(adpDados.getCount() > 0)
+                {
+                    String item = adpDados.getItem(0);
+                    adpDados.remove(item);
+
+                }
+            }
+        }
 
     }
 
