@@ -19,5 +19,12 @@ public class ActMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
+
+        edtValor = (EditText) findViewById(R.id.edtValor);
+        spnOpcoes = (Spinner) findViewById(R.id.spnOpcoes);
+        btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
+        btnExcluir = (Button) findViewById(R.id.btnExcluir);
+        lstDados = (ListView) findViewById(R.id.lsvDados);
+
     }
 }
