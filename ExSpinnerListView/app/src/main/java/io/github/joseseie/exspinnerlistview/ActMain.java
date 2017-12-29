@@ -36,10 +36,10 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
         adpOpcoes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnOpcoes.setAdapter(adpOpcoes);
 
-        adpDados.add("Opcao 1");
-        adpDados.add("Opcao 2");
-        adpDados.add("Opcao 3");
-        adpDados.add("Opcao 4");
+        adpOpcoes.add("Opcao 1");
+        adpOpcoes.add("Opcao 2");
+        adpOpcoes.add("Opcao 3");
+        adpOpcoes.add("Opcao 4");
 
         adpDados = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
         lstDados.setAdapter(adpDados);
