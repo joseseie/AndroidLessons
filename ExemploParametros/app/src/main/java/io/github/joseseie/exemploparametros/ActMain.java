@@ -17,12 +17,11 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.act_main);
 
 
-        //Registo  de evento
-        btnOk.setOnClickListener(this);
-
         edtValor = (EditText) findViewById(R.id.edtValor);
         btnOk = (Button) findViewById(R.id.btnOk);
 
+        //Registo  de evento
+        btnOk.setOnClickListener(this);
 
     }
 
@@ -30,7 +29,7 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
     {
         Intent it = new Intent(this,ActSeungaTela.class);
 
-        it.putExtra("VALOR",edtValor.getText().toString());
+        it.putExtra("VALOR", edtValor.getText().toString() );
 
         startActivity(it);
 
