@@ -63,7 +63,8 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener {
             {
                 if(adpDados.getCount() > 0)
                 {
-                    String item = adpDados.getItem(0);
+                    String item = adpDados.getItem(0); //Excluir o primeiro item
+//                    String item = adpDados.getItem(adpDados.getCount()-1); //Exclui o ultimo item
                     adpDados.remove(item);
 
                 }
