@@ -84,7 +84,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editText"
+                        android:id="@+id/edtEmail"
                         android:layout_width="326dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
