@@ -1,6 +1,7 @@
 package io.github.joseseie.agendacontacto;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.*;
@@ -15,7 +16,9 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
     private ImageButton btnAdicionar;
     private EditText edtPesquisa;
     private ListView lstContatos;
+
     private DataBase dataBase;
+    private SQLiteDatabase conn;
 
 
     @Override
@@ -29,7 +32,24 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
         btnAdicionar.setOnClickListener(this);
 
-        dataBase = new DataBase(this);
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+        dlg.setNeutralButton("Ok",null);
+        dlg.show();
+
+        try {
+
+            dataBase = new DataBase(this);
+            conn = dataBase.getReadableDatabase();
+
+            dlg.setMessage("Conexao criada com sucesso");
+
+        } catch (SQLException ex) {
+
+            dlg.setMessage("Erro ao criar o banco: " + ex.getMessage());
+
+        }
+
+        dlg.show();
 
     }
 
