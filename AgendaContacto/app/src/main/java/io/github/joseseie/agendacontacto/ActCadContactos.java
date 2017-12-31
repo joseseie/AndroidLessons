@@ -32,7 +32,10 @@ public class ActCadContactos extends AppCompatActivity {
         edtDatasEspeciais     = (EditText) findViewById(R.id.edtDatasEspeciais);
         edtGrupos     = (EditText) findViewById(R.id.edtGrupos);
 
-
+        spnTipoEmail = (Spinner) findViewById(R.id.spnTipoEmail);
+        spnTipoTelefone = (Spinner) findViewById(R.id.spnTipoTelefone);
+        spnTipoEndereco = (Spinner) findViewById(R.id.spnTipoEndereco);
+        spnTipoDatasEspeciais = (Spinner) findViewById(R.id.spnDatasEspeciais);
 
     }
 }
