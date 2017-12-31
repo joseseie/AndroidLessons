@@ -4,4 +4,5 @@
     <string name="lblTelefone">Telefone</string>
     <string name="lblEmail">Email</string>
     <string name="lblNome">Nome</string>
+    <string name="lblEndereco">Endereco</string>
 </resources>
