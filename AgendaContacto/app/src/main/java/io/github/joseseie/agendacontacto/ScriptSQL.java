@@ -21,7 +21,7 @@ public class ScriptSQL {
         sqlBuilder.append("TIPOENDERECO     VARCHAR(1), ");
         sqlBuilder.append("DATASESPECIAIS   DATE, ");
         sqlBuilder.append("TIPODATAESPECIAIS VARCHAR(1), ");
-        sqlBuilder.append("GRUPOS           VARCHAR(255), ");
+        sqlBuilder.append("GRUPOS           VARCHAR(255) ");
         sqlBuilder.append(" ); ");
 
         return sqlBuilder.toString();
