@@ -57,7 +57,7 @@
 
                     <Spinner
                         android:id="@+id/spnTipoTelefone"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
@@ -92,7 +92,7 @@
 
                     <Spinner
                         android:id="@+id/spnTipoEmail"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
@@ -127,7 +127,7 @@
 
                     <Spinner
                         android:id="@+id/spnTipoEndereco"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
@@ -162,7 +162,7 @@
 
                     <Spinner
                         android:id="@+id/spnDatasEspeciais"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
