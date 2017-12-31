@@ -95,6 +95,13 @@ public class ActCadContactos extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.mni_acao1: break;
+
+            case R.id.mni_acao2: break;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
