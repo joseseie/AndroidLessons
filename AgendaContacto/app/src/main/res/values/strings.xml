@@ -5,4 +5,6 @@
     <string name="lblEmail">Email</string>
     <string name="lblNome">Nome</string>
     <string name="lblEndereco">Endereco</string>
+    <string name="lblDatasEspeciais">Datas Especiais</string>
+    <string name="lblGrupos">Grupos</string>
 </resources>
