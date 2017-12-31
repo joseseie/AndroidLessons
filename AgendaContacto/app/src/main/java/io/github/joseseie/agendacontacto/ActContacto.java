@@ -10,6 +10,8 @@ import android.view.*;
 import android.database.sqlite.*;
 import android.database.*;
 
+import io.github.joseseie.agendacontacto.database.DataBase;
+
 
 public class ActContacto extends AppCompatActivity implements View.OnClickListener {
 

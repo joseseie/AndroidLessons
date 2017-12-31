@@ -1,4 +1,4 @@
-package io.github.joseseie.agendacontacto;
+package io.github.joseseie.agendacontacto.database;
 
 /**
  * Created by Jose Seie on 12/31/2017.
