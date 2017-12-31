@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.widget.*;
 import android.view.*;
 
+import android.database.sqlite.*;
+import android.database.*;
+
 
 public class ActContacto extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton btnAdicionar;
     private EditText edtPesquisa;
     private ListView lstContatos;
+    private DataBase dataBase;
 
 
     @Override
@@ -23,10 +27,9 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
         edtPesquisa     = (EditText) findViewById(R.id.edtPesquisa);
         lstContatos     = (ListView) findViewById(R.id.lstContactos);
 
-
-
         btnAdicionar.setOnClickListener(this);
 
+        dataBase = new DataBase(this);
 
     }
 
