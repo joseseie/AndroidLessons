@@ -13,10 +13,14 @@ public class DataBase extends SQLiteOpenHelper {
     {
         super(context,"AGENDA",null,1);
     }
+
+    @Override
     public void onCreate(SQLiteDatabase db){
+
 
     }
 
+    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
