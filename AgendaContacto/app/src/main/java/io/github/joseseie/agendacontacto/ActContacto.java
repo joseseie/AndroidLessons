@@ -10,13 +10,21 @@ import android.view.*;
 public class ActContacto extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton btnAdicionar;
+    private EditText edtPesquisa;
+    private ListView lstContatos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_contacto);
 
-        btnAdicionar = (ImageButton) findViewById(R.id.btnAdicionar);
+        btnAdicionar    = (ImageButton) findViewById(R.id.btnAdicionar);
+        edtPesquisa     = (EditText) findViewById(R.id.edtPesquisa);
+        lstContatos     = (ListView) findViewById(R.id.lstContactos);
+
+
+
         btnAdicionar.setOnClickListener(this);
 
 
