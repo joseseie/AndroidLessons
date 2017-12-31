@@ -20,6 +20,12 @@ public class ActCadContactos extends AppCompatActivity {
     private Spinner spnTipoDatasEspeciais;
 
 
+    private ArrayAdapter<String> adpTipoEmail;
+    private ArrayAdapter<String> adpTipoTelefone;
+    private ArrayAdapter<String> adpTipoEndereco;
+    private ArrayAdapter<String> adpTipoDatasEspeciais;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +42,31 @@ public class ActCadContactos extends AppCompatActivity {
         spnTipoTelefone = (Spinner) findViewById(R.id.spnTipoTelefone);
         spnTipoEndereco = (Spinner) findViewById(R.id.spnTipoEndereco);
         spnTipoDatasEspeciais = (Spinner) findViewById(R.id.spnDatasEspeciais);
+
+        adpTipoEmail = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
+        adpTipoEmail.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        adpTipoTelefone = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
+        adpTipoTelefone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        adpTipoEndereco = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
+        adpTipoEndereco.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        adpTipoDatasEspeciais = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
+        adpTipoDatasEspeciais.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+        spnTipoEmail.setAdapter(adpTipoEmail);
+        spnTipoTelefone.setAdapter(adpTipoTelefone);
+        spnTipoDatasEspeciais.setAdapter(adpTipoDatasEspeciais);
+        spnTipoEndereco.setAdapter(adpTipoEndereco);
+
+
+        adpTipoEmail.add("Casa");
+        adpTipoEmail.add("Trabalho");
+        adpTipoEmail.add("Outros");
+
+        adpTipoTelefone.add("");
 
     }
 }
