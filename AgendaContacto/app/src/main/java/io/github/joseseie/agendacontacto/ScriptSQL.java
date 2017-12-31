@@ -23,7 +23,8 @@ public class ScriptSQL {
         sqlBuilder.append("TIPODATAESPECIAIS VARCHAR(1), ");
         sqlBuilder.append("GRUPOS           VARCHAR(255), ");
         sqlBuilder.append(" ); ");
-        return null;
+
+        return sqlBuilder.toString();
     }
 
 
