@@ -66,7 +66,21 @@ public class ActCadContactos extends AppCompatActivity {
         adpTipoEmail.add("Trabalho");
         adpTipoEmail.add("Outros");
 
-        adpTipoTelefone.add("");
+        adpTipoTelefone.add("Celular");
+        adpTipoTelefone.add("Trabalho");
+        adpTipoTelefone.add("Casa");
+        adpTipoTelefone.add("Principal");
+        adpTipoTelefone.add("Fax Trabalho");
+        adpTipoTelefone.add("Pagar");
+        adpTipoTelefone.add("Outros");
+
+        adpTipoEndereco.add("casa");
+        adpTipoEndereco.add("Trabalho");
+        adpTipoEndereco.add("Outros");
+
+        adpTipoDatasEspeciais.add("Aniversario");
+        adpTipoDatasEspeciais.add("Data comemorativa");
+        adpTipoDatasEspeciais.add("Outros");
 
     }
 }
