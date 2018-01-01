@@ -1,6 +1,7 @@
 package io.github.joseseie.agendacontacto.dominio;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.ArrayAdapter;
 
@@ -22,7 +23,18 @@ public class RepositorioContato {
     {
         ArrayAdapter<String> adpContactos = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1);
 
-        //Continuar no minuto 20, no video 13.
+        Cursor cursor = conn.query("CONTATO",null,null,null,null,null,null);
+
+        if(cursor.getCount() > 0)
+        {
+            do {
+
+                String telefone = cursor.getString(1);
+                adpContactos.add(telefone);
+
+            } while (cursor.moveToNext());
+
+        }
 
         return adpContactos;
     }
