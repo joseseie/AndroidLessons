@@ -1,5 +1,6 @@
 package io.github.joseseie.agendacontacto.dominio;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -19,6 +20,16 @@ public class RepositorioContato {
         this.conn = conn;
     }
 
+    public void testeInserirContatos(){
+
+        for (int i = 0; i < 10; i ++) {
+            ContentValues values = new ContentValues();
+            values.put("TELEFONE", "84543752" + i);
+            conn.insertOrThrow("CONTATO",null,values);
+        }
+
+    }
+
     public ArrayAdapter<String> buscaContatos(Context context)
     {
         ArrayAdapter<String> adpContactos = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1);
@@ -27,6 +38,8 @@ public class RepositorioContato {
 
         if(cursor.getCount() > 0)
         {
+            cursor.moveToFirst();
+
             do {
 
                 String telefone = cursor.getString(1);

@@ -43,9 +43,11 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
         try {
 
             dataBase = new DataBase(this);
-            conn = dataBase.getReadableDatabase();
+            conn = dataBase.getWritableDatabase();
 
             repositorioContato = new RepositorioContato(conn);
+
+            repositorioContato.testeInserirContatos();
 
             adpContatos = repositorioContato.buscaContatos(this);
 
