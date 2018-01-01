@@ -51,6 +51,8 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
             adpContatos = repositorioContato.buscaContatos(this);
 
+            lstContatos.setAdapter(adpContatos);
+
             dlg.setMessage("Conexao criada com sucesso");
 
         } catch (SQLException ex) {
