@@ -12,6 +12,7 @@ import android.database.*;
 
 import io.github.joseseie.agendacontacto.database.DataBase;
 import io.github.joseseie.agendacontacto.dominio.RepositorioContato;
+import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
 
 public class ActContacto extends AppCompatActivity implements View.OnClickListener {
@@ -19,7 +20,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
     private ImageButton btnAdicionar;
     private EditText edtPesquisa;
     private ListView lstContatos;
-    private ArrayAdapter<String> adpContatos;
+    private ArrayAdapter<Contato> adpContatos;
 
     private DataBase dataBase;
     private SQLiteDatabase conn;
@@ -37,8 +38,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
         btnAdicionar.setOnClickListener(this);
 
-        AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-        dlg.setNeutralButton("Ok",null);
+
 
         try {
 
@@ -47,21 +47,22 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
             repositorioContato = new RepositorioContato(conn);
 
-            repositorioContato.testeInserirContatos();
+
 
             adpContatos = repositorioContato.buscaContatos(this);
 
             lstContatos.setAdapter(adpContatos);
 
-            dlg.setMessage("Conexao criada com sucesso");
-
         } catch (SQLException ex) {
 
+            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+            dlg.setNeutralButton("Ok",null);
             dlg.setMessage("Erro ao criar o banco: " + ex.getMessage());
+            dlg.show();
 
         }
 
-        dlg.show();
+
 
     }
 

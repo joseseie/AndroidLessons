@@ -109,4 +109,9 @@ public class Contato {
     public void setGrupos(String grupos) {
         this.grupos = grupos;
     }
+
+    public String toString()
+    {
+        return this.nome + " " + this.telefone;
+    }
 }
