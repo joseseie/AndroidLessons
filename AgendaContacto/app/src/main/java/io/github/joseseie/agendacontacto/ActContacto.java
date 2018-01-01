@@ -11,6 +11,7 @@ import android.database.sqlite.*;
 import android.database.*;
 
 import io.github.joseseie.agendacontacto.database.DataBase;
+import io.github.joseseie.agendacontacto.dominio.RepositorioContato;
 
 
 public class ActContacto extends AppCompatActivity implements View.OnClickListener {
@@ -18,9 +19,11 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
     private ImageButton btnAdicionar;
     private EditText edtPesquisa;
     private ListView lstContatos;
+    private ArrayAdapter<String> adpContatos;
 
     private DataBase dataBase;
     private SQLiteDatabase conn;
+    private RepositorioContato repositorioContato;
 
 
     @Override
@@ -36,12 +39,15 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
         AlertDialog.Builder dlg = new AlertDialog.Builder(this);
         dlg.setNeutralButton("Ok",null);
-        dlg.show();
 
         try {
 
             dataBase = new DataBase(this);
             conn = dataBase.getReadableDatabase();
+
+            repositorioContato = new RepositorioContato(conn);
+
+            adpContatos = repositorioContato.buscaContatos(this);
 
             dlg.setMessage("Conexao criada com sucesso");
 
