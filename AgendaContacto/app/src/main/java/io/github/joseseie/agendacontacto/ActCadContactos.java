@@ -146,7 +146,8 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
         switch (item.getItemId()){
             case R.id.mni_acao1:
-                if(contato == null)
+
+                if(contato.getId() == 0)
                 {
                     inserir();
                 }
@@ -157,6 +158,18 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void preencheDados()
+    {
+        edtNome.setText( contato.getNome() );
+        edtTelefone.setText( contato.getTelefone() );
+        spnTipoTelefone.setSelection( Integer.parseInt(contato.getTipoTelefone()) );
+        edtEmail.setText( contato.getEmail() );
+        spnTipoEmail.setSelection( Integer.parseInt(contato.getTipoEmail()) );
+        edtNome.setText( contato.getNome() );
+
+    }
+
 
     private void inserir()
     {

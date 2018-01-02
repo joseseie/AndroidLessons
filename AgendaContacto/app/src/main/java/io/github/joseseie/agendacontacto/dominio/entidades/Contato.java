@@ -10,7 +10,7 @@ import java.util.Date;
 public class Contato implements Serializable {
 
     public static String ID = "ID";
-    public static String NOME = "ID";
+    public static String NOME = "NOME";
     public static String TELEFONE = "TELEFONE";
     public static String TIPOTELEFONE = "TIPOTELEFONE";
     public static String EMAIL = "EMAIL";
@@ -18,7 +18,7 @@ public class Contato implements Serializable {
     public static String ENDERECO = "ENDERECO";
     public static String TIPOENDERECO = "TIPOENDERECO";
     public static String DATASESPECIAIS = "DATASESPECIAIS";
-    public static String TIPODATASESPECIAIS = "TIPODATASESPECIAIS";
+    public static String TIPODATASESPECIAIS = "TIPODATAESPECIAIS";
     public static String GRUPOS = "GRUPOS";
 
     private long id;
@@ -33,7 +33,7 @@ public class Contato implements Serializable {
     private String tipoDatasEspeciais;
     private String grupos;
 
-    public Contato() {}
+    public Contato() { id = 0; }
 
     public long getId() {
         return id;
