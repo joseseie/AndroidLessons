@@ -15,7 +15,7 @@ import io.github.joseseie.agendacontacto.dominio.RepositorioContato;
 import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
 
-public class ActContacto extends AppCompatActivity implements View.OnClickListener {
+public class ActContacto extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     private ImageButton btnAdicionar;
     private EditText edtPesquisa;
@@ -80,6 +80,18 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
         adpContatos = repositorioContato.buscaContatos(this);
 
         lstContatos.setAdapter(adpContatos);
+
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+        Contato contato = adpContatos.getItem(position);
+
+        Intent it = new Intent(this, ActCadContactos.class);
+        it.putExtra("CONTATO", contato );
+        startActivityForResult(it,0);
 
     }
 }

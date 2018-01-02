@@ -105,6 +105,13 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         edtDatasEspeciais.setOnFocusChangeListener( new ExibeDataListener() );
 
 
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle != null && (bundle.containsKey("CONTATO")))
+        {
+            contato = (Contato) bundle.getSerializable("CONTATO");
+        }
+        else contato = new Contato();
 
         try {
 

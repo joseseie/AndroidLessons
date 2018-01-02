@@ -1,12 +1,13 @@
 package io.github.joseseie.agendacontacto.dominio.entidades;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Jose Seie on 1/1/2018.
  */
 
-public class Contato {
+public class Contato implements Serializable {
 
     private long id;
     private String nome;
