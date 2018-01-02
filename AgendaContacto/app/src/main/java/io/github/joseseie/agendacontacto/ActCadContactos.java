@@ -166,7 +166,13 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         spnTipoTelefone.setSelection( Integer.parseInt(contato.getTipoTelefone()) );
         edtEmail.setText( contato.getEmail() );
         spnTipoEmail.setSelection( Integer.parseInt(contato.getTipoEmail()) );
-        edtNome.setText( contato.getNome() );
+        edtEndereco.setText( contato.getEndereco() );
+        spnTipoEndereco.setSelection( Integer.parseInt(contato.getTipoEndereco()) );
+
+        DateFormat format = DateFormat.getDateInstance(DateFormat.SHORT);
+        String df = format.format( contato.getDatasEspeciais() );
+
+        edtDatasEspeciais.setText( df );
 
     }
 
