@@ -185,7 +185,13 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
     private void exibeData()
     {
-        DatePickerDialog dlg = new DatePickerDialog(this,new SelecionaDataListener(),2018,1,2);
+        Calendar calendar = Calendar.getInstance();
+
+        int ano = calendar.get(Calendar.YEAR);
+        int mes = calendar.get(Calendar.MONTH);
+        int dia = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog dlg = new DatePickerDialog(this,new SelecionaDataListener(),ano,mes,dia);
         dlg.show();
 
     }
