@@ -47,6 +47,8 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_cad_contactos);
 
+        contato  = new Contato();
+
         edtNome     = (EditText) findViewById(R.id.edtNome);
         edtEmail     = (EditText) findViewById(R.id.edtEmail);
         edtTelefone     = (EditText) findViewById(R.id.edtTelefone);
@@ -155,15 +157,10 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         try {
 
 
-            contato  = new Contato();
-
             contato.setNome(edtNome.getText().toString());
             contato.setTelefone(edtTelefone.getText().toString());
             contato.setEmail(edtEmail.getText().toString());
             contato.setEndereco(edtEndereco.getText().toString());
-
-            Date date = new Date();
-            contato.setDatasEspeciais( date );
 
             contato.setGrupos( edtGrupos.getText().toString() );
 
@@ -217,11 +214,12 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
              Date date = calendar.getTime();
 
-             DateFormat format = DateFormat.getDateInstance(DateFormat.MEDIUM);
+             DateFormat format = DateFormat.getDateInstance(DateFormat.SHORT);
              String df = format.format(date);
 
              edtDatasEspeciais.setText(df);
 
+             contato.setDatasEspeciais(date);
 
          }
      }
