@@ -9,6 +9,18 @@ import java.util.Date;
 
 public class Contato implements Serializable {
 
+    public static String ID = "ID";
+    public static String NOME = "ID";
+    public static String TELEFONE = "TELEFONE";
+    public static String TIPOTELEFONE = "TIPOTELEFONE";
+    public static String EMAIL = "EMAIL";
+    public static String TIPOEMAIL = "TIPOEMAIL";
+    public static String ENDERECO = "ENDERECO";
+    public static String TIPOENDERECO = "TIPOENDERECO";
+    public static String DATASESPECIAIS = "DATASESPECIAIS";
+    public static String TIPODATASESPECIAIS = "TIPODATASESPECIAIS";
+    public static String GRUPOS = "GRUPOS";
+
     private long id;
     private String nome;
     private String telefone;

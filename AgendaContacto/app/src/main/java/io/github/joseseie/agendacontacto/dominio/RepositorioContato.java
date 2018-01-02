@@ -66,8 +66,8 @@ public class RepositorioContato {
 
                 Contato  contato = new Contato();
 
-                contato.setId(cursor.getLong( cursor.getColumnIndex("ID") ));
-                contato.setNome(cursor.getString(1));
+                contato.setId(cursor.getLong( cursor.getColumnIndex(Contato.ID) ));
+                contato.setNome(cursor.getString(cursor.getColumnIndex(Contato.NOME)));
                 contato.setTelefone(cursor.getString(2));
                 contato.setTipoTelefone(cursor.getString(3));
                 contato.setEmail(cursor.getString(4));
