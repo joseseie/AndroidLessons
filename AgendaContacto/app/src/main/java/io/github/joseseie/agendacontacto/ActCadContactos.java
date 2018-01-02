@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.*;
 import android.view.*;
 
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import io.github.joseseie.agendacontacto.database.DataBase;
@@ -186,7 +188,7 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
     private void exibeData()
     {
-        DatePickerDialog dlg = new DatePickerDialog(this,null,2018,2,1);
+        DatePickerDialog dlg = new DatePickerDialog(this,new SelecionaDataListener(),2018,1,2);
         dlg.show();
 
     }
@@ -203,6 +205,26 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
             if(hasFocus) exibeData();
         }
     }
+
+     private class SelecionaDataListener implements DatePickerDialog.OnDateSetListener {
+
+         @Override
+         public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
+
+             Calendar calendar = Calendar.getInstance();
+
+             calendar.set(year,monthOfYear,dayOfMonth);
+
+             Date date = calendar.getTime();
+
+             DateFormat format = DateFormat.getDateInstance(DateFormat.MEDIUM);
+             String df = format.format(date);
+
+             edtDatasEspeciais.setText(df);
+
+
+         }
+     }
 
 
 
