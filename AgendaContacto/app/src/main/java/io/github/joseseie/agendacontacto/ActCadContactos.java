@@ -1,5 +1,6 @@
  package io.github.joseseie.agendacontacto;
 
+import android.app.DatePickerDialog;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
@@ -95,6 +96,9 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         adpTipoDatasEspeciais.add("Data comemorativa");
         adpTipoDatasEspeciais.add("Outros");
 
+        //Evento clique no campo de texto.
+        edtDatasEspeciais.setOnClickListener(new ExibeDataListener());
+
         try {
 
             dataBase = new DataBase(this);
@@ -156,10 +160,12 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
             Date date = new Date();
             contato.setDatasEspeciais( date );
 
-            contato.setTipoTelefone("");
-            contato.setTipoEmail("");
-            contato.setTipoEndereco("");
-            contato.setTipoDatasEspeciais("");
+            contato.setGrupos( edtGrupos.getText().toString() );
+
+            contato.setTipoTelefone( String.valueOf( spnTipoTelefone.getSelectedItemPosition()) );
+            contato.setTipoEmail( String.valueOf( spnTipoEmail.getSelectedItemPosition()) );
+            contato.setTipoEndereco( String.valueOf( spnTipoEndereco.getSelectedItemPosition()) );
+            contato.setTipoDatasEspeciais( String.valueOf( spnTipoDatasEspeciais.getSelectedItemPosition()) );
 
             repositorioContato.inserir(contato);
 
@@ -174,6 +180,26 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
     }
 
+
+    private void exibeData()
+    {
+        DatePickerDialog dlg = new DatePickerDialog(this,null,2018,2,1);
+        dlg.show();
+
+    }
+
+    private class ExibeDataListener implements View.OnClickListener, View.OnFocusChangeListener {
+
+        @Override
+        public void onClick(View view) {
+            exibeData();
+        }
+
+        @Override
+        public void onFocusChange(View view, boolean b) {
+            exibeData();
+        }
+    }
 
 
 

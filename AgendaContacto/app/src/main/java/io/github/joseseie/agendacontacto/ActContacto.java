@@ -70,8 +70,16 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
     {
         Intent it = new Intent(this, ActCadContactos.class);
 
-        startActivity(it);
+        startActivityForResult(it,0);
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        adpContatos = repositorioContato.buscaContatos(this);
+
+        lstContatos.setAdapter(adpContatos);
+
+    }
 }
