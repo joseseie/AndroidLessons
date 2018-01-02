@@ -97,7 +97,10 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         adpTipoDatasEspeciais.add("Outros");
 
         //Evento clique no campo de texto.
-        edtDatasEspeciais.setOnClickListener(new ExibeDataListener());
+        edtDatasEspeciais.setOnClickListener( new ExibeDataListener() );
+        edtDatasEspeciais.setOnFocusChangeListener( new ExibeDataListener() );
+
+
 
         try {
 
@@ -196,8 +199,8 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         }
 
         @Override
-        public void onFocusChange(View view, boolean b) {
-            exibeData();
+        public void onFocusChange(View view, boolean hasFocus) {
+            if(hasFocus) exibeData();
         }
     }
 
