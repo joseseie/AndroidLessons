@@ -139,6 +139,10 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_act_cad_contactos, menu);
 
+        if( contato.getId() != 0 )
+            menu.getItem(R.id.mni_acao2).setVisible( true );
+
+        
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -152,7 +156,10 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
                 break;
 
-            case R.id.mni_acao2: break;
+            case R.id.mni_acao2:
+
+                this.exclir();
+                break;
         }
 
         return super.onOptionsItemSelected(item);
@@ -178,6 +185,23 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
     }
 
+    private void exclir()
+    {
+        try {
+
+            repositorioContato.excluir( contato.getId() );
+
+        } catch (Exception ex) {
+
+            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+            dlg.setNeutralButton("Ok",null);
+            dlg.setMessage("Erro ao Excluir os dados: " + ex.getMessage());
+            dlg.show();
+
+        }
+
+
+    }
 
     private void salvar()
     {
