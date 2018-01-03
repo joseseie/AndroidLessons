@@ -43,14 +43,14 @@ public class RepositorioContato {
 
     public void excluir(long id)
     {
-        conn.delete("CONTATO","ID = ? ", new String[]{ String.valueOf( id ) });
+        conn.delete( Contato.TABELA,"ID = ? ", new String[]{ String.valueOf( id ) });
     }
 
     public void inserir(Contato contato)
     {
         ContentValues values = this.preencheContentValues(contato);
 
-        conn.insertOrThrow("CONTATO",null,values);
+        conn.insertOrThrow( Contato.TABELA,null,values);
     }
 
 
@@ -62,7 +62,7 @@ public class RepositorioContato {
 
             String[] params = { String.valueOf(contato.getId()) };
 
-            conn.update("CONTATO",values," ID = ? ",params);
+            conn.update( Contato.TABELA ,values," ID = ? ",params);
         }
     }
 
@@ -71,7 +71,7 @@ public class RepositorioContato {
         for (int i = 0; i < 10; i ++) {
             ContentValues values = new ContentValues();
             values.put("TELEFONE", "84543752" + i);
-            conn.insertOrThrow("CONTATO",null,values);
+            conn.insertOrThrow( Contato.TABELA ,null,values);
         }
 
     }
@@ -80,7 +80,7 @@ public class RepositorioContato {
     {
         ArrayAdapter<Contato> adpContactos = new ArrayAdapter<Contato>(context, android.R.layout.simple_list_item_1);
 
-        Cursor cursor = conn.query("CONTATO",null,null,null,null,null,null);
+        Cursor cursor = conn.query( Contato.TABELA ,null,null,null,null,null,null);
 
         if(cursor.getCount() > 0)
         {

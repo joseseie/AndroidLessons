@@ -14,6 +14,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import io.github.joseseie.agendacontacto.app.MessageBox;
+import io.github.joseseie.agendacontacto.app.ViewHelper;
 import io.github.joseseie.agendacontacto.database.DataBase;
 import io.github.joseseie.agendacontacto.dominio.RepositorioContato;
 import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
@@ -63,6 +64,12 @@ import io.github.joseseie.agendacontacto.util.DateUtils;
         spnTipoEndereco = (Spinner) findViewById(R.id.spnTipoEndereco);
         spnTipoDatasEspeciais = (Spinner) findViewById(R.id.spnDatasEspeciais);
 
+        adpTipoEmail            = ViewHelper.createArrayAdapter(this, spnTipoEmail );
+        adpTipoTelefone         = ViewHelper.createArrayAdapter(this, spnTipoTelefone );
+        adpTipoEndereco         = ViewHelper.createArrayAdapter(this, spnTipoEndereco );
+        adpTipoDatasEspeciais   = ViewHelper.createArrayAdapter(this, spnTipoDatasEspeciais );
+
+        /*
         adpTipoEmail = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
         adpTipoEmail.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -80,7 +87,7 @@ import io.github.joseseie.agendacontacto.util.DateUtils;
         spnTipoTelefone.setAdapter(adpTipoTelefone);
         spnTipoDatasEspeciais.setAdapter(adpTipoDatasEspeciais);
         spnTipoEndereco.setAdapter(adpTipoEndereco);
-
+    */
 
         adpTipoEmail.add("Casa");
         adpTipoEmail.add("Trabalho");
