@@ -17,6 +17,7 @@ import io.github.joseseie.agendacontacto.app.MessageBox;
 import io.github.joseseie.agendacontacto.database.DataBase;
 import io.github.joseseie.agendacontacto.dominio.RepositorioContato;
 import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
+import io.github.joseseie.agendacontacto.util.DateUtils;
 
  public class ActCadContactos extends AppCompatActivity {
 
@@ -264,18 +265,12 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
          @Override
          public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
 
-             Calendar calendar = Calendar.getInstance();
-
-             calendar.set(year,monthOfYear,dayOfMonth);
-
-             Date date = calendar.getTime();
-
-             DateFormat format = DateFormat.getDateInstance(DateFormat.SHORT);
-             String df = format.format(date);
+             String df = DateUtils.dateToString(year,monthOfYear,dayOfMonth);
+             Date date = DateUtils.getDate(year,monthOfYear,dayOfMonth);
 
              edtDatasEspeciais.setText(df);
 
-             contato.setDatasEspeciais(date);
+             contato.setDatasEspeciais( date );
 
          }
      }
