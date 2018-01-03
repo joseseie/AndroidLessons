@@ -13,6 +13,7 @@ import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import io.github.joseseie.agendacontacto.app.MessageBox;
 import io.github.joseseie.agendacontacto.database.DataBase;
 import io.github.joseseie.agendacontacto.dominio.RepositorioContato;
 import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
@@ -124,10 +125,7 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
         } catch (SQLException ex) {
 
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setNeutralButton("Ok",null);
-            dlg.setMessage("Erro ao criar o banco: " + ex.getMessage());
-            dlg.show();
+            MessageBox.show(this,"Erro","Erro ao conectar o banco " + ex.getMessage() );
 
         }
 
@@ -196,10 +194,8 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
         } catch (Exception ex) {
 
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setNeutralButton("Ok",null);
-            dlg.setMessage("Erro ao Excluir os dados: " + ex.getMessage());
-            dlg.show();
+            MessageBox.show(this,"Erro","Erro ao criar o banco " + ex.getMessage() );
+
 
         }
 
@@ -231,10 +227,7 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
         } catch (Exception ex) {
 
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setNeutralButton("Ok",null);
-            dlg.setMessage("Erro ao inserir os dados: " + ex.getMessage());
-            dlg.show();
+            MessageBox.show(this,"Erro","Erro ao salvar os dados: " + ex.getMessage() );
 
         }
 

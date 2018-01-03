@@ -10,6 +10,7 @@ import android.view.*;
 import android.database.sqlite.*;
 import android.database.*;
 
+import io.github.joseseie.agendacontacto.app.MessageBox;
 import io.github.joseseie.agendacontacto.database.DataBase;
 import io.github.joseseie.agendacontacto.dominio.RepositorioContato;
 import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
@@ -56,10 +57,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
         } catch (SQLException ex) {
 
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setNeutralButton("Ok",null);
-            dlg.setMessage("Erro ao criar o banco: " + ex.getMessage());
-            dlg.show();
+            MessageBox.show(this,"Erro","Erro ao criar o banco " + ex.getMessage() );
 
         }
 
