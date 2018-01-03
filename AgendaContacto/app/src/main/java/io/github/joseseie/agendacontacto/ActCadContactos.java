@@ -139,11 +139,13 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_act_cad_contactos, menu);
 
-        if( contato.getId() != 0 )
-            menu.getItem(R.id.mni_acao2).setVisible( true );
+        super.onCreateOptionsMenu(menu);
 
-        
-        return super.onCreateOptionsMenu(menu);
+        if( contato.getId() != 0 )
+            menu.getItem(1).setVisible( true );
+
+
+        return true;
     }
 
     @Override
@@ -153,12 +155,13 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
             case R.id.mni_acao1:
 
                 salvar();
-
+                finish();
                 break;
 
             case R.id.mni_acao2:
 
                 this.exclir();
+                finish();
                 break;
         }
 
