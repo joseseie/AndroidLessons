@@ -91,7 +91,9 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
         Contato contato = adpContatos.getItem(position);
 
         Intent it = new Intent(this, ActCadContactos.class);
+
         it.putExtra("CONTATO", contato );
+
         startActivityForResult(it,0);
 
     }

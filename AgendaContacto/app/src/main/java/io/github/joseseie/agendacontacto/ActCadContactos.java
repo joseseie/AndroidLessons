@@ -110,6 +110,7 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         if(bundle != null && (bundle.containsKey("CONTATO")))
         {
             contato = (Contato) bundle.getSerializable("CONTATO");
+            this.preencheDados();
         }
         else contato = new Contato();
 
