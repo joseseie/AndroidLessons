@@ -148,10 +148,8 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         switch (item.getItemId()){
             case R.id.mni_acao1:
 
-                if(contato.getId() == 0)
-                {
-                    inserir();
-                }
+                salvar();
+
                 break;
 
             case R.id.mni_acao2: break;
@@ -181,7 +179,7 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
     }
 
 
-    private void inserir()
+    private void salvar()
     {
 
         try {
@@ -199,7 +197,10 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
             contato.setTipoEndereco( String.valueOf( spnTipoEndereco.getSelectedItemPosition()) );
             contato.setTipoDatasEspeciais( String.valueOf( spnTipoDatasEspeciais.getSelectedItemPosition()) );
 
-            repositorioContato.inserir(contato);
+            if(contato.getId() == 0)
+                repositorioContato.inserir(contato);
+            else
+                repositorioContato.alterar(contato);
 
         } catch (Exception ex) {
 
@@ -211,7 +212,6 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         }
 
     }
-
 
     private void exibeData()
     {

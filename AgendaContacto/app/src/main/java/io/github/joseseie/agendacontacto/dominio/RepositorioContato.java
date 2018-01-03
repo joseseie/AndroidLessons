@@ -24,7 +24,7 @@ public class RepositorioContato {
         this.conn = conn;
     }
 
-    public void inserir(Contato contato)
+    private ContentValues preencheContentValues(Contato contato)
     {
         ContentValues values = new ContentValues();
         values.put("NOME", contato.getNome());
@@ -38,8 +38,27 @@ public class RepositorioContato {
         values.put("TIPODATAESPECIAIS", contato.getTipoDatasEspeciais());
         values.put("GRUPOS", contato.getGrupos());
 
+        return values;
+    }
+
+    public void inserir(Contato contato)
+    {
+        ContentValues values = this.preencheContentValues(contato);
 
         conn.insertOrThrow("CONTATO",null,values);
+    }
+
+
+    public void alterar(Contato contato)
+    {
+        if(contato.getId() > 0 )
+        {
+            ContentValues values = this.preencheContentValues(contato);
+
+            String[] params = { String.valueOf(contato.getId()) };
+
+            conn.update("CONTATO",values," ID = ? ",params);
+        }
     }
 
     public void testeInserirContatos(){
