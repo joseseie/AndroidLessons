@@ -27,6 +27,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
     private SQLiteDatabase conn;
     private RepositorioContato repositorioContato;
 
+    public static final String PAR_CONTATO = "CONTATO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +49,6 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
             conn = dataBase.getWritableDatabase();
 
             repositorioContato = new RepositorioContato(conn);
-
-
 
             adpContatos = repositorioContato.buscaContatos(this);
 
@@ -90,7 +89,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
         Intent it = new Intent(this, ActCadContactos.class);
 
-        it.putExtra("CONTATO", contato );
+        it.putExtra(PAR_CONTATO, contato );
 
         startActivityForResult(it,0);
 

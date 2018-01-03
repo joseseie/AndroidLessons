@@ -108,9 +108,9 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
         Bundle bundle = getIntent().getExtras();
 
-        if(bundle != null && (bundle.containsKey("CONTATO")))
+        if(bundle != null && (bundle.containsKey( ActContacto.PAR_CONTATO )))
         {
-            contato = (Contato) bundle.getSerializable("CONTATO");
+            contato = (Contato) bundle.getSerializable( ActContacto.PAR_CONTATO );
             this.preencheDados();
         }
         else contato = new Contato();
