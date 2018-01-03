@@ -173,6 +173,9 @@ import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
         String df = format.format( contato.getDatasEspeciais() );
 
         edtDatasEspeciais.setText( df );
+        spnTipoDatasEspeciais.setSelection( Integer.parseInt( contato.getTipoDatasEspeciais() ));
+
+        edtGrupos.setText( contato.getGrupos() );
 
     }
 

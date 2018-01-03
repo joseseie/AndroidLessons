@@ -37,6 +37,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
         lstContatos     = (ListView) findViewById(R.id.lstContactos);
 
         btnAdicionar.setOnClickListener(this);
+        lstContatos.setOnItemClickListener(this);
 
 
 
