@@ -69,6 +69,13 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if(conn != null) conn.close();
+    }
+
     public void onClick(View v)
     {
         Intent it = new Intent(this, ActCadContactos.class);
