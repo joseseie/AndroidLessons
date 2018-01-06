@@ -94,7 +94,7 @@ import io.github.joseseie.agendacontacto.util.DateUtils;
         //Evento clique no campo de texto.
         edtDatasEspeciais.setOnClickListener( new ExibeDataListener() );
         edtDatasEspeciais.setOnFocusChangeListener( new ExibeDataListener() );
-
+        edtDatasEspeciais.setKeyListener(null);
 
         Bundle bundle = getIntent().getExtras();
 

@@ -28,6 +28,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
     private DataBase dataBase;
     private SQLiteDatabase conn;
     private RepositorioContato repositorioContato;
+    private FiltraDados filtraDados;
 
     public static final String PAR_CONTATO = "CONTATO";
 
@@ -56,7 +57,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
             lstContatos.setAdapter(adpContatos);
 
-            FiltraDados filtraDados = new FiltraDados(adpContatos);
+            filtraDados = new FiltraDados(adpContatos);
             edtPesquisa.addTextChangedListener(filtraDados);
 
         } catch (SQLException ex) {
@@ -88,7 +89,7 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         adpContatos = repositorioContato.buscaContatos(this);
-
+        filtraDados.setArrayAdapter(adpContatos);
         lstContatos.setAdapter(adpContatos);
 
     }
@@ -111,6 +112,11 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
         private ArrayAdapter<Contato> arrayAdapter;
         private FiltraDados(ArrayAdapter<Contato> arrayAdapter)
+        {
+            this.arrayAdapter = arrayAdapter;
+        }
+
+        public void setArrayAdapter(ArrayAdapter<Contato> arrayAdapter)
         {
             this.arrayAdapter = arrayAdapter;
         }
