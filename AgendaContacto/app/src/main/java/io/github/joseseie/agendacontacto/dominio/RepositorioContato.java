@@ -27,16 +27,16 @@ public class RepositorioContato {
     private ContentValues preencheContentValues(Contato contato)
     {
         ContentValues values = new ContentValues();
-        values.put("NOME", contato.getNome());
-        values.put("TELEFONE", contato.getTelefone());
-        values.put("TIPOTELEFONE", contato.getTipoTelefone());
-        values.put("EMAIL", contato.getEmail());
-        values.put("TIPOEMAIL", contato.getTipoEmail());
-        values.put("ENDERECO", contato.getEndereco());
-        values.put("TIPOENDERECO", contato.getTipoEndereco());
-        values.put("DATASESPECIAIS", contato.getDatasEspeciais().getTime());
-        values.put("TIPODATAESPECIAIS", contato.getTipoDatasEspeciais());
-        values.put("GRUPOS", contato.getGrupos());
+        values.put(Contato.NOME, contato.getNome());
+        values.put(Contato.TELEFONE, contato.getTelefone());
+        values.put(Contato.TIPOTELEFONE, contato.getTipoTelefone());
+        values.put(Contato.EMAIL, contato.getEmail());
+        values.put(Contato.TIPOEMAIL, contato.getTipoEmail());
+        values.put(Contato.ENDERECO, contato.getEndereco());
+        values.put(Contato.TIPOENDERECO, contato.getTipoEndereco());
+        values.put(Contato.DATASESPECIAIS, contato.getDatasEspeciais().getTime());
+        values.put(Contato.TIPODATASESPECIAIS, contato.getTipoDatasEspeciais());
+        values.put(Contato.GRUPOS, contato.getGrupos());
 
         return values;
     }
@@ -64,16 +64,6 @@ public class RepositorioContato {
 
             conn.update( Contato.TABELA ,values," ID = ? ",params);
         }
-    }
-
-    public void testeInserirContatos(){
-
-        for (int i = 0; i < 10; i ++) {
-            ContentValues values = new ContentValues();
-            values.put("TELEFONE", "84543752" + i);
-            conn.insertOrThrow( Contato.TABELA ,null,values);
-        }
-
     }
 
     public ArrayAdapter<Contato> buscaContatos(Context context)

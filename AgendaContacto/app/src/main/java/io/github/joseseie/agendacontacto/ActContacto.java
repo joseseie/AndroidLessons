@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.*;
 import android.view.*;
 
@@ -54,6 +56,9 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
 
             lstContatos.setAdapter(adpContatos);
 
+            FiltraDados filtraDados = new FiltraDados(adpContatos);
+            edtPesquisa.addTextChangedListener(filtraDados);
+
         } catch (SQLException ex) {
 
             MessageBox.show(this,"Erro","Erro ao criar o banco " + ex.getMessage() );
@@ -94,4 +99,29 @@ public class ActContacto extends AppCompatActivity implements View.OnClickListen
         startActivityForResult(it,0);
 
     }
+
+    private class FiltraDados implements TextWatcher {
+
+        private ArrayAdapter<Contato> arrayAdapter;
+        private FiltraDados(ArrayAdapter<Contato> arrayAdapter)
+        {
+            this.arrayAdapter = arrayAdapter;
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            this.arrayAdapter.getFilter().filter(charSequence);
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    }
+
 }
