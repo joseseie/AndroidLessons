@@ -19,11 +19,13 @@ public class ContatoArrayAdapter extends ArrayAdapter<Contato> {
 
     private int resource = 0;
     private LayoutInflater inflater;
+    private Context context;
 
     public ContatoArrayAdapter(Context context, int resource) {
         super(context, resource);
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.resource = resource;
+        this.context = context;
     }
 
     @NonNull
@@ -56,7 +58,15 @@ public class ContatoArrayAdapter extends ArrayAdapter<Contato> {
 
         Contato contato = getItem(position);
 
-        //viewHolder.txtColor
+        if(contato.getNome().toUpperCase().equals("A"))
+            viewHolder.txtColor.setBackgroundColor( context.getResources().getColor(R.color.azul) );
+        else
+            if(contato.getNome().toUpperCase().equals("J"))
+                viewHolder.txtColor.setBackgroundColor( context.getResources().getColor(R.color.vermelho) );
+            else
+                viewHolder.txtColor.setBackgroundColor( context.getResources().getColor(R.color.color1) );
+
+            //viewHolder.txtColor
         viewHolder.txtNome.setText(contato.getNome());
         viewHolder.txtTelefone.setText(contato.getTelefone());
 
