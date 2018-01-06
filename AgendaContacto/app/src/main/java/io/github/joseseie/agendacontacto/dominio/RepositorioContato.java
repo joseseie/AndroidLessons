@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 
 import java.util.Date;
 
+import io.github.joseseie.agendacontacto.ContatoArrayAdapter;
+import io.github.joseseie.agendacontacto.R;
 import io.github.joseseie.agendacontacto.dominio.entidades.Contato;
 
 /**
@@ -66,9 +68,9 @@ public class RepositorioContato {
         }
     }
 
-    public ArrayAdapter<Contato> buscaContatos(Context context)
+    public ContatoArrayAdapter buscaContatos(Context context)
     {
-        ArrayAdapter<Contato> adpContactos = new ArrayAdapter<Contato>(context, android.R.layout.simple_list_item_1);
+        ContatoArrayAdapter adpContactos = new ContatoArrayAdapter(context, R.layout.item_contato);
 
         Cursor cursor = conn.query( Contato.TABELA ,null,null,null,null,null,null);
 
