@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ProjectoItent</string>
+    <string name="lbl_chamar_browser">Chamar Broswer</string>
+    <string name="lbl_abrir_browser">Abrir Browser</string>
 </resources>
