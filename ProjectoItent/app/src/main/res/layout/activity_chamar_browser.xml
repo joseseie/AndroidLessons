@@ -8,7 +8,7 @@
     tools:context="io.github.joseseie.projectoitent.ChamarBrowser">
 
     <EditText
-        android:id="@+id/txtURL"
+        android:id="@+id/edtUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

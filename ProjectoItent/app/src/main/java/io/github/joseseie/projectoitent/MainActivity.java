@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
+        /**
+         * NOtA: Parei no video nr. 21 no minuto 23. na madrugada do domingo do dia 07 de Janeiro de 2018
+         *
+         * Ainda continua.
+         */
+
         if(view == btnChamarBroswer)
         {
             Intent intent = new Intent(this, ChamarBrowser.class );
