@@ -39,8 +39,8 @@ public class ChamarBrowser extends AppCompatActivity implements View.OnClickList
         } catch (Exception ex)
         {
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setMessage("Url Invalida");
-            dlg.setNeutralButton("Ok",null);
+            dlg.setMessage(getResources().getString(R.string.msg_url_invalida));
+            dlg.setNeutralButton(getResources().getString(R.string.lbl_ok),null);
             dlg.show();
         }
     }
