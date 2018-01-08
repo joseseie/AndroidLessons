@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="io.github.joseseie.projectoitent.MainActivity">
 
 
     <Button
         android:id="@+id/btnChamarBroswer"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/lbl_chamar_browser" />
+
+    <Button
+        android:id="@+id/btnFazerLigacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_fazer_ligacao" />
 </LinearLayout>
