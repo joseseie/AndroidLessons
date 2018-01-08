@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnChamarBroswer;
+    private Button btnFazerLigacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +18,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         this.btnChamarBroswer = (Button) findViewById(R.id.btnChamarBroswer);
+        this.btnFazerLigacao = (Button) findViewById(R.id.btnFazerLigacao);
 
         this.btnChamarBroswer.setOnClickListener(this);
+        this.btnFazerLigacao.setOnClickListener(this);
     }
 
 
@@ -28,6 +31,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view == btnChamarBroswer)
         {
             Intent intent = new Intent(this, ChamarBrowser.class );
+            startActivity(intent);
+
+        } else if (view == btnFazerLigacao)
+        {
+            Intent intent = new Intent(this, FazerLigacao.class );
             startActivity(intent);
         }
     }
