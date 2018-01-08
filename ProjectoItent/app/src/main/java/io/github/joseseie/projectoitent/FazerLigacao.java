@@ -31,20 +31,34 @@ public class FazerLigacao extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
+        String phone_number = edtNumero.getText().toString();
+
         try {
-            Uri uri = Uri.parse("tel:" + edtNumero.getText().toString());
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone_number));
 
-            Intent intent = new Intent(Intent.ACTION_CALL, uri);
+            startActivity(intent);
 
-             startActivity(intent);
-
-        } catch (SecurityException ex)
-        {
+        } catch (Exception ex) {
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
             dlg.setMessage(getResources().getString(R.string.msg_numero_invalido) + "\n\n" + ex.getMessage());
             dlg.setNeutralButton(getResources().getString(R.string.lbl_ok),null);
             dlg.show();
         }
+//
+//        try {
+//            Uri uri = Uri.parse("tel:" + phone_number);
+//
+//            Intent intent = new Intent(Intent.ACTION_CALL, uri);
+//
+//             startActivity(intent);
+//
+//        } catch (SecurityException ex)
+//        {
+//            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+//            dlg.setMessage(getResources().getString(R.string.msg_numero_invalido) + "\n\n" + ex.getMessage());
+//            dlg.setNeutralButton(getResources().getString(R.string.lbl_ok),null);
+//            dlg.show();
+//        }
 
     }
 }
