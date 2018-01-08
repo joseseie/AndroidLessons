@@ -7,5 +7,7 @@
     <string name="lbl_ok">Ok</string>
     <string name="lbl_fazer_ligacao">Fazer Ligaçao</string>
     <string name="lbl_confirmar">Confirmar</string>
+    <string name="lbl_cancelar">Cancelar</string>
+    <string name="lbl_exemplo_parametro">Exemplo Parametro</string>
 
 </resources>

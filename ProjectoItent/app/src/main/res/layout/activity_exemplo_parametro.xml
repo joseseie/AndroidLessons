@@ -10,9 +10,9 @@
         android:id="@+id/edtValor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button2"
+        android:layout_alignEnd="@+id/btnCancelar"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/button2"
+        android:layout_alignRight="@+id/btnCancelar"
         android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -29,11 +29,11 @@
         android:text="@string/lbl_confirmar" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btnConfirmar"
         android:layout_alignBottom="@+id/btnConfirmar"
         android:layout_centerHorizontal="true"
-        android:text="Button" />
+        android:text="@string/lbl_cancelar" />
 </RelativeLayout>

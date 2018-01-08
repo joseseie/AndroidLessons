@@ -9,8 +9,11 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private final int EXEMPLO_PARAMETRO_ACTIVITY = 0;
+
     private Button btnChamarBroswer;
     private Button btnFazerLigacao;
+    private Button btnExemploParametro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.btnChamarBroswer = (Button) findViewById(R.id.btnChamarBroswer);
         this.btnFazerLigacao = (Button) findViewById(R.id.btnFazerLigacao);
+        this.btnExemploParametro = (Button) findViewById(R.id.btnExemploParametro);
 
         this.btnChamarBroswer.setOnClickListener(this);
         this.btnFazerLigacao.setOnClickListener(this);
+        this.btnExemploParametro.setOnClickListener(this);
     }
 
 
@@ -33,10 +38,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, ChamarBrowser.class );
             startActivity(intent);
 
-        } else if (view == btnFazerLigacao)
+        }
+        else if (view == btnFazerLigacao)
         {
             Intent intent = new Intent(this, FazerLigacao.class );
             startActivity(intent);
+
+        }
+        else if (view == btnExemploParametro)
+        {
+            Intent intent = new Intent(this, ExemploParametroActivity.class );
+            startActivityForResult(intent, EXEMPLO_PARAMETRO_ACTIVITY);
         }
     }
 }
