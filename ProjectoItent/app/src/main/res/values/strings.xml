@@ -6,5 +6,6 @@
     <string name="msg_numero_invalido">Numero de Telfone Invalido</string>
     <string name="lbl_ok">Ok</string>
     <string name="lbl_fazer_ligacao">Fazer Ligaçao</string>
+    <string name="lbl_confirmar">Confirmar</string>
 
 </resources>
