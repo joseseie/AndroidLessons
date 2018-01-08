@@ -1,6 +1,7 @@
 package io.github.joseseie.projectoitent;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -50,5 +51,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, ExemploParametroActivity.class );
             startActivityForResult(intent, EXEMPLO_PARAMETRO_ACTIVITY);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        Bundle parametros = null;
+
+        if(data != null) parametros = data.getExtras();
+
+        if(requestCode == EXEMPLO_PARAMETRO_ACTIVITY)
+        {
+
+        }
+        switch (resultCode)
+        {
+            case RESULT_OK:
+                if(parametros != null)
+                {
+                    String vallor = parametros.getString("VALOR");
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+                    dlg.setMessage("O o valor do parametro eh: " + vallor);
+                    dlg.setNeutralButton("Ok", null);
+                    dlg.show();
+
+                }
+                break;
+            case RESULT_CANCELED:
+
+                AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+                dlg.setMessage("Operacao Cancelada.");
+                dlg.setNeutralButton("Ok", null);
+                dlg.show();
+
+                break;
+        }
+
     }
 }
