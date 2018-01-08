@@ -4,5 +4,6 @@
     <string name="lbl_abrir_browser">Abrir Browser</string>
     <string name="msg_url_invalida">Url Invalida</string>
     <string name="lbl_ok">Url Invalida</string>
+    <string name="lbl_fazer_ligacao">Fazer Ligaçao</string>
 
 </resources>
