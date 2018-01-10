@@ -1,10 +1,14 @@
 package io.github.joseseie.todolist;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.app.AlertDialog;;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.List;
@@ -12,18 +16,25 @@ import java.util.List;
 import adapter.UsuarioAdapter;
 import dao.UsuarioDAO;
 import model.Usuario;
+import util.Mensagem;
 
-public class ListUsuariosActivity extends AppCompatActivity {
+public class ListUsuariosActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, DialogInterface.OnClickListener{
 
     private ListView lista;
     private List<Usuario> usuarioList;
     private UsuarioAdapter usuarioAdapter;
     private UsuarioDAO usuarioDAO;
 
+    private AlertDialog alertDialog, alertConfirmacao;
+    private int idPosicao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_usuarios);
+
+        alertDialog         = Mensagem.criarAlertDialog(this);
+        alertConfirmacao    = Mensagem.criarDialogConfirmacao(this);
 
         usuarioDAO = new UsuarioDAO(this);
         usuarioList = usuarioDAO.listarUsuarios();
@@ -32,6 +43,7 @@ public class ListUsuariosActivity extends AppCompatActivity {
         lista = (ListView) findViewById(R.id.lvUsuarios);
         lista.setAdapter(usuarioAdapter);
 
+        lista.setOnItemClickListener(this);
     }
 
     @Override
@@ -52,6 +64,14 @@ public class ListUsuariosActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(DialogInterface dialogInterface, int i) {
 
+    }
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        idPosicao = position;
+        alertDialog.show();
+    }
 }
