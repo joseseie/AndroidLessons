@@ -52,12 +52,12 @@ public class CadUsuarioActivity extends AppCompatActivity {
 
         if (login == null || login.equals("") ) {
             validacao = false;
-            edtNome.setError(getString(R.string.campo_obrigatorio));
+            edtLogin.setError(getString(R.string.campo_obrigatorio));
         }
 
         if (senha == null || senha.equals("") ) {
             validacao = false;
-            edtNome.setError(getString(R.string.campo_obrigatorio));
+            edtSenha.setError(getString(R.string.campo_obrigatorio));
         }
 
         if ( validacao )
@@ -65,7 +65,7 @@ public class CadUsuarioActivity extends AppCompatActivity {
             usuario = new Usuario();
             usuario.setNome( nome );
             usuario.setLogin( login );
-            usuario.setLogin( senha );
+            usuario.setSenha( senha );
 
             if ( idusuario > 0 )
             {
