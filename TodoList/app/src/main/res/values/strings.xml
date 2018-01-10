@@ -10,6 +10,7 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="excluir">Excluir</string>
     <string name="sair">Sair</string>
+    <string name="logout">Logout</string>
     <string name="usuarios">Usuarios</string>
     <string name="listar_usuarios">Listar Usuarios</string>
 
