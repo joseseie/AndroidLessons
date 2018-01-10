@@ -52,7 +52,8 @@
             android:text="@string/login_btnEntrar"
             android:background="#333"
             android:textColor="#FFF"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:onClick="logar"/>
         
     </LinearLayout>
 
