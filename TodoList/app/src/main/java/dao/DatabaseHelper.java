@@ -31,8 +31,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
         db.execSQL("create table tarefas(_id integer primary key autoincrement, " +
                 "tarefa text not null, " +
-                "dt_criacao datetime default current_datetime, " +
-                "db_completado date )");
+                "dt_criacao datetime default current_timestamp, " +
+                "db_completado datetime )");
 
         db.execSQL("insert into usuarios" +
                 "(nome, login, senha) values ('Admin', 'admin', '123')");

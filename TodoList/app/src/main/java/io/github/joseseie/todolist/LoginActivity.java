@@ -1,13 +1,18 @@
 package io.github.joseseie.todolist;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import dao.UsuarioDAO;
+import util.Mensagem;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText edtUsuario, edtSenha;
+    private UsuarioDAO helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +21,9 @@ public class LoginActivity extends AppCompatActivity {
 
         edtUsuario = (EditText) findViewById(R.id.login_edtUsuario);
         edtSenha   = (EditText) findViewById(R.id.login_edtUSenha);
+
+        helper = new UsuarioDAO(this);
+
     }
 
     public void logar(View view)
@@ -34,11 +42,22 @@ public class LoginActivity extends AppCompatActivity {
         if (senha == null || senha.equals(""))
         {
             validacao = false;
-            edtUsuario.setError(getString(R.string.login_valSenha));
+            edtSenha.setError(getString(R.string.login_valSenha));
         }
 
         if( validacao ) {
-            // Logar..
+            // Logar
+            if ( helper.logar(usuario, senha) )
+            {
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+            }
+            else
+            {
+                //Mensagem de erro
+                Mensagem.Msg(this,getString(R.string.msg_login_incorrecto));
+
+            }
         }
     }
 

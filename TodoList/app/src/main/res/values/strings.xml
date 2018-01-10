@@ -12,4 +12,7 @@
     <string name="login_valUsuario">Usuario obrigatorio</string>
     <string name="login_valSenha">Sennha obrigatoria</string>
 
+    <!--Mensagens-->
+    <string name="msg_login_incorrecto">Usuario e/ou senha invalido.</string>
+
 </resources>
