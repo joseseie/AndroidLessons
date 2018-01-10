@@ -34,6 +34,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 "dt_criacao datetime default current_datetime, " +
                 "db_completado date )");
 
+        db.execSQL("insert into usuarios" +
+                "(nome, login, senha) values ('Admin', 'admin', '123')");
+
 
     }
 
