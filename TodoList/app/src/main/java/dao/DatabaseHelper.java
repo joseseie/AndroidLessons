@@ -26,13 +26,14 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                         "_id integer primary key autoincrement," +
                         "nome text not null, " +
                         "login text not null, " +
-                        "senha text not null) ");
+                        "senha text not null, " +
+                        "created_at text) ");
         //Tabela tarefas
 
         db.execSQL("create table tarefas(_id integer primary key autoincrement, " +
                 "tarefa text not null, " +
-                "dt_criacao datetime default current_timestamp, " +
-                "db_completado datetime )");
+                "dt_criacao text, " +
+                "db_completado text )");
 
         db.execSQL("insert into usuarios" +
                 "(nome, login, senha) values ('Admin', 'admin', '123')");
@@ -52,9 +53,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         public static final String NOME = "nome";
         public static final String LOGIN = "login";
         public static final String SENHA = "senha";
+        public static final String CREATED_AT = "created_at";
 
         public static final String[] COLUNAS = new String[]{
-                _ID, NOME, LOGIN, SENHA
+                _ID, NOME, LOGIN, SENHA, CREATED_AT
         };
 
     }

@@ -3,9 +3,10 @@
     >
 
     <item
-        android:id="@+id/action_list_usuarios"
-        android:title="@string/listar_usuarios"
+        android:id="@+id/action_cadastrar_usuarios"
+        android:title="@string/cadastrar"
         android:orderInCategory="100"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom|withText"
+        />
 
 </menu>

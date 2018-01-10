@@ -10,6 +10,7 @@ public class Usuario {
     private String nome;
     private String login;
     private String senha;
+    private String created_at;
 
     public Usuario(){}
 
@@ -50,5 +51,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
     }
 }

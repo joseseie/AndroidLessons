@@ -63,6 +63,7 @@ public class UsuarioDAO {
         values.put(DatabaseHelper.Usuarios.NOME, usuario.getNome());
         values.put(DatabaseHelper.Usuarios.LOGIN, usuario.getLogin());
         values.put(DatabaseHelper.Usuarios.SENHA, usuario.getSenha());
+        values.put(DatabaseHelper.Usuarios.CREATED_AT, usuario.getCreated_at());
 
         if ( usuario.get_id() != null )
             return getDatabase().update(DatabaseHelper.Usuarios.TABELA, values,

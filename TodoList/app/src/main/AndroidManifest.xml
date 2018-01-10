@@ -19,8 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CadUsuarioActivity" />
-        <activity android:name=".ListUsuariosActivity"></activity>
+        <activity android:name=".CadUsuarioActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListUsuariosActivity"/>
+        </activity>
+        <activity
+            android:name=".ListUsuariosActivity"
+            android:label="@string/usuarios">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+
+        </activity>
     </application>
 
 </manifest>

@@ -24,10 +24,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if ( id == R.id.action_cadastro_usuarios ) {
-            startActivity( new Intent(this, CadUsuarioActivity.class) );
-        }
-
         if ( id == R.id.action_list_usuarios ) {
             startActivity( new Intent(this, ListUsuariosActivity.class) );
         }
