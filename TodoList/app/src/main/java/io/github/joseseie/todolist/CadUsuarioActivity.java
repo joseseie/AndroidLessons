@@ -29,6 +29,17 @@ public class CadUsuarioActivity extends AppCompatActivity {
         edtLogin        = (EditText) findViewById(R.id.usuario_edtLogin);
         edtSenha        = (EditText) findViewById(R.id.usuario_edtSenha);
 
+        //Modo de edicao
+        idusuario = getIntent().getIntExtra("USUARIO_ID",0);
+
+        if (idusuario > 0)
+        {
+            Usuario model = usuarioDAO.buscarUsuarioPorId( idusuario );
+            edtNome.setText(  model.getNome() );
+            edtLogin.setText( model.getLogin() );
+            edtSenha.setText( model.getSenha() );
+            setTitle( "Atualizar Usuario ");
+        }
     }
 
     @Override
@@ -42,7 +53,7 @@ public class CadUsuarioActivity extends AppCompatActivity {
         boolean validacao = true;
 
         String nome = edtNome.getText().toString();
-        String login = edtNome.getText().toString();
+        String login = edtLogin.getText().toString();
         String senha = edtSenha.getText().toString();
 
         if (nome == null || nome.equals("") ) {
@@ -96,10 +107,10 @@ public class CadUsuarioActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.cadastros, menu);
-
-        if ( idusuario > 0 ) {
-            menu.findItem(R.id.action_menu_excluir).setVisible(true);
-        }
+//
+//        if  ( idusuario > 0 ) {
+//            menu.findItem(R.id.action_menu_excluir).setVisible(true);
+//        }
         return true;
     }
 

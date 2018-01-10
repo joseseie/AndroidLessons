@@ -65,7 +65,27 @@ public class ListUsuariosActivity extends AppCompatActivity implements AdapterVi
 
 
     @Override
-    public void onClick(DialogInterface dialogInterface, int i) {
+    public void onClick(DialogInterface dialogInterface, int swich) {
+        int id = usuarioList.get( idPosicao ).get_id();
+
+        switch (swich) {
+            case 0:
+                Intent intent = new Intent(this, CadUsuarioActivity.class);
+                intent.putExtra("USUARIO_ID", id);
+                startActivity( intent );
+            case 1:
+                alertConfirmacao.show();
+                break;
+
+            case DialogInterface.BUTTON_POSITIVE:
+                usuarioList.remove( idPosicao );
+                usuarioDAO.removerUsuario( id );
+                lista.invalidateViews(); //actualiza a lista
+                break;
+            case  DialogInterface.BUTTON_NEGATIVE:
+                alertConfirmacao.dismiss();
+                break;
+        }
 
     }
 

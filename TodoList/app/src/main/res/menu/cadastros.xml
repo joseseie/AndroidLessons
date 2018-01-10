@@ -9,13 +9,6 @@
         app:showAsAction="ifRoom|withText"/>
 
     <item
-        android:id="@+id/action_menu_excluir"
-        android:title="@string/excluir"
-        android:orderInCategory="100"
-        android:visible="false"
-        app:showAsAction="ifRoom|withText"/>
-
-    <item
         android:id="@+id/action_menu_sair"
         android:title="@string/sair"
         android:orderInCategory="100"
