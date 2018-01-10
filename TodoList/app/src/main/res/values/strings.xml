@@ -6,13 +6,26 @@
     <string name="login_txtSenha">Senha</string>
     <string name="login_btnEntrar">Entrar</string>
     <string name="login_ckbConectado">Manter Conectado</string>
+    <string name="salvar">Salvar</string>
+    <string name="excluir">Excluir</string>
+    <string name="sair">Sair</string>
+    <string name="usuarios">Usuarios</string>
 
     <!--Validacoes-->
 
     <string name="login_valUsuario">Usuario obrigatorio</string>
     <string name="login_valSenha">Sennha obrigatoria</string>
+    <string name="campo_obrigatorio">Campo Obrigatorio</string>
 
     <!--Mensagens-->
     <string name="msg_login_incorrecto">Usuario e/ou senha invalido.</string>
+    <string name="mensagem_cadastro">Registo cadastrado com sucesso!</string>
+    <string name="mensagem_actializar">Registo actualizado com sucesso!</string>
+    <string name="mensagem_erro">Erro ao salvar!</string>
+
+    <!--Usuarios-->
+    <string name="usuario_txtNome">Nome:</string>
+    <string name="usuario_txtLogin">Login:</string>
+    <string name="usuario_txtSenha">Senha:</string>
 
 </resources>
