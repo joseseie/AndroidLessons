@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Act. Parametros de retorno</string>
     <string name="lbl_chamar_browser">Chamar Broswer</string>
     <string name="lbl_abrir_browser">Abrir Browser</string>

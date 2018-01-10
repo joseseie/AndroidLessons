@@ -8,6 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.kosalgeek.genasync12.AsyncResponse;
+import com.kosalgeek.genasync12.PostResponseAsyncTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        PostResponseAsyncTask task1 = new PostResponseAsyncTask(this, new AsyncResponse() {
+            @Override
+            public void processFinish(String s) {
+                Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
+            }
+        });
+
+//        task1.execute("http://10.0.2.2:8080/xampp/");
+        task1.execute("http://10.0.2.2/xampp/");
+
     }
 
     @Override

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Todo List</string>
+    <string name="title_activity_login">Login</string>
+
+    <string name="login_txtUsuario">Usuario</string>
+    <string name="login_txtSenha">Senha</string>
+    <string name="login_btnEntrar">Entrar</string>
+    <string name="login_ckbConectado">Manter Conectado</string>
+
+</resources>
