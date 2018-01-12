@@ -62,6 +62,8 @@ import io.github.joseseie.androideatit.model.User;
                                 startActivity( intent );
                                 finish();
 
+//                                Toast.makeText(SignIn.this, "Login Sucess!", Toast.LENGTH_LONG).show();
+
                             } else {
                                 Toast.makeText(SignIn.this, "Wrong password!", Toast.LENGTH_LONG).show();
                             }
