@@ -3,5 +3,9 @@
     <string name="slogan">No matter where you are, you always need some partner that make you feel better and you be better</string>
     <string name="SignUp">SignUp</string>
     <string name="SignIn">Sign In</string>
+    <string name="hint_phone">Phone hint</string>
+    <string name="hint_password">Password hint</string>
+    <string name="phone_number">0988132345</string>
+    <string name="person_password">sdfser</string>
 
 </resources>

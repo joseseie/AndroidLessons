@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         txtSlogan   = (TextView) findViewById(R.id.txtSlogan);
 
-        Typeface face =  Typeface.createFromAsset(getAssets(), "fonts/NABILA.TTF");
+        Typeface face =  Typeface.createFromAsset(getAssets(), "fonts/Nabila.ttf");
         txtSlogan.setTypeface( face );
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
