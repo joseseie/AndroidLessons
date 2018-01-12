@@ -1,0 +1,65 @@
+
+
+{
+  "Category": {
+    "10": {
+      "Name": "GOOD UMBURGERS",
+      "Image": "https://los-angeles.eat24hours.com/files/cuisines/v4/thai.jpg"
+    },
+    "11": {
+      "Name": "CAMARAO",
+      "Image": "http://www.allwhitebackground.com/images/3/3430.jpg"
+    },
+    "01": {
+      "Name": "FINGER FOODS",
+      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg"
+    },
+    "02": {
+      "Name": "WESTEN SOUPS",
+      "Image": "https://fthmb.tqn.com/1VeM9x2-cwz8G5yAyXpDqa4qYK8=/3938x2824/filters:no_upscale()/close-up-of-a-cup-of-minestrone-soup-170619278-588b932a5f9b5874ee58ac21.jpg"
+    },
+    "03": {
+      "Name": "CHICKENS",
+      "Image": "http://s.marketwatch.com/public/resources/MWimages/MW-FF138_chicke_ZG_20170203152528.jpg"
+    },
+    "04": {
+      "Name": "Cassavas",
+      "Image": "https://fthmb.tqn.com/jD83tKJAqsBP5QQZ_9dhfWd-lvk=/735x0/cassava-592b60025f9b585950fc87fd.jpg"
+    },
+    "05": {
+      "Name": "GOOD UMBURGERS",
+      "Image": "https://los-angeles.eat24hours.com/files/cuisines/v4/thai.jpg"
+    },
+    "06": {
+      "Name": "PIZZA",
+      "Image": "https://www.drdavidludwig.com/wp-content/uploads/2017/01/1-RIS_6IbCLYv1X3bzYW1lmA.jpeg"
+    },
+    "07": {
+      "Name": "WESTEN SOUPS",
+      "Image": "https://fthmb.tqn.com/1VeM9x2-cwz8G5yAyXpDqa4qYK8=/3938x2824/filters:no_upscale()/close-up-of-a-cup-of-minestrone-soup-170619278-588b932a5f9b5874ee58ac21.jpg"
+    },
+    "08": {
+      "Name": "CHICKENS",
+      "Image": "http://s.marketwatch.com/public/resources/MWimages/MW-FF138_chicke_ZG_20170203152528.jpg"
+    },
+    "09": {
+      "Name": "Cassavas",
+      "Image": "https://fthmb.tqn.com/jD83tKJAqsBP5QQZ_9dhfWd-lvk=/735x0/cassava-592b60025f9b585950fc87fd.jpg"
+    }
+  },
+  
+  "User" : {
+    "0988123344" : {
+      "Name" : "Eddydn",
+      "Password" : "1234"
+    },
+    "0988123355" : {
+      "Name" : "Eddydn",
+      "Password" : "1234"
+    },
+    "0988132345" : {
+      "name" : "Tom Cruiser",
+      "password" : "sdfser"
+    }
+  }
+}

@@ -1,6 +1,7 @@
  package io.github.joseseie.androideatit;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import io.github.joseseie.androideatit.common.Common;
 import io.github.joseseie.androideatit.model.User;
 
  public class SignIn extends AppCompatActivity {
@@ -53,8 +55,13 @@ import io.github.joseseie.androideatit.model.User;
                             mDialog.dismiss();
                             User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
 
-                            if (user.getPassword().equals(edtPassword.getText().toString())) {
-                                Toast.makeText(SignIn.this, "Sign in sucessfuly!", Toast.LENGTH_LONG).show();
+                            if (user.getPassword().equals(edtPassword.getText().toString()))
+                            {
+                                Intent  intent = new Intent(SignIn.this, Home.class);
+                                Common.currentUser = user;
+                                startActivity( intent );
+                                finish();
+
                             } else {
                                 Toast.makeText(SignIn.this, "Wrong password!", Toast.LENGTH_LONG).show();
                             }
