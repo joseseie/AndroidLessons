@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/Sake_480x400"
+    android:background="@drawable/sake_480x400"
     tools:context="io.github.joseseie.androideatit.MainActivity">
 
     <LinearLayout
@@ -43,10 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:shadowColor="@android:color/black"
-            android:shadowDy="5dp"
             android:layout_margin="5dp"
             android:background="@color/btnSignUp"
-            android:shadowRadius="5dp"
             />
         <!--Procurar este tipo de botao-->
         <!--info.hoang8f.widget.FButton-->
@@ -60,9 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:shadowColor="@android:color/black"
-            android:shadowDy="5dp"
             android:background="@color/btnSignActive"
-            android:shadowRadius="5dp"
             />
     </LinearLayout>
 
