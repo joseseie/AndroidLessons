@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidEatIt</string>
+    <string name="slogan">No matter where you are, you always need some partner that make you feel better and you be better</string>
+    <string name="SignUp">SignUp</string>
+    <string name="SignIn">Sign In</string>
+
 </resources>
