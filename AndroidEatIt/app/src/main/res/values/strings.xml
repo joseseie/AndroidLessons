@@ -5,6 +5,8 @@
     <string name="SignIn">Sign In</string>
     <string name="hint_phone">Phone hint</string>
     <string name="hint_password">Password hint</string>
+    <string name="hint_name">Name hint</string>
+    <string name="name">Tom Cruiser</string>
     <string name="phone_number">0988132345</string>
     <string name="person_password">sdfser</string>
 
