@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Firebase</string>
+
+    <!--Labels-->
+    <string name="lbl_novo">Novo</string>
+    <string name="lbl_actualizar">Actualizar</string>
+    <string name="lbl_deletar">Deletar</string>
+    <string name="lbl_nome">Nome</string>
+    <string name="lbl_email">Email</string>
+
 </resources>
