@@ -23,8 +23,8 @@ public class ListViewActivity extends AppCompatActivity {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://fireapp-59e43.firebaseio.com/");
 
         FirebaseListAdapter<String> firebaseListAdapter = new FirebaseListAdapter<String>(
-                this,
-                String.class,
+                ListViewActivity.this,
+                android.R.layout.simple_list_item_1,
                 databaseReference
         ) {
             @Override
