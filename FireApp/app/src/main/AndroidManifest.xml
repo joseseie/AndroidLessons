@@ -22,7 +22,8 @@
         <activity android:name=".SaveToFirebaseActivity" />
         <activity android:name=".Login" />
         <activity android:name=".AccountActivity" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".ImageUploadActivity"></activity>
     </application>
 
 </manifest>

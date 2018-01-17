@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
-    Button btnSaveToFirebase, btnLogin;
+    Button btnSaveToFirebase, btnLogin, btnListView, btnImageUpload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         btnLogin.setOnClickListener(this);
         btnSaveToFirebase.setOnClickListener(this);
+        btnListView.setOnClickListener(this);
+        btnImageUpload.setOnClickListener(this);
 
     }
 
@@ -51,6 +53,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         {
             msg = "Clicou btnSaveToFirebase";
             this.startMyActivity( msg, SaveToFirebaseActivity.class );
+
+        }
+        else if (view == btnListView)
+        {
+            msg = "Clicou btnSaveToFirebase";
+            this.startMyActivity( msg, ListViewActivity.class );
+
+        }
+        else if (view == btnImageUpload)
+        {
+            msg = "Clicou btnSaveToFirebase";
+            this.startMyActivity( msg, ImageUploadActivity.class );
 
         }
 

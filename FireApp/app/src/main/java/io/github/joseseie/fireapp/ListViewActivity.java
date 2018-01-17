@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
-import com.firebase.ui.database.FirebaseListAdapter;
+//import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -21,17 +21,17 @@ public class ListViewActivity extends AppCompatActivity {
         listView    = (ListView) findViewById(R.id.listView);
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://fireapp-59e43.firebaseio.com/");
-
-        FirebaseListAdapter<String> firebaseListAdapter = new FirebaseListAdapter<String>(
-                ListViewActivity.this,
-                android.R.layout.simple_list_item_1,
-                databaseReference
-        ) {
-            @Override
-            protected void populateView(View v, String model, int position) {
-
-            }
-        };
+//
+//        FirebaseListAdapter<String> firebaseListAdapter = new FirebaseListAdapter<String>(
+//                ListViewActivity.this,
+//                android.R.layout.simple_list_item_1,
+//                databaseReference
+//        ) {
+//            @Override
+//            protected void populateView(View v, String model, int position) {
+//
+//            }
+//        };
 
     }
 }

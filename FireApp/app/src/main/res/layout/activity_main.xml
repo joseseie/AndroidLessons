@@ -25,4 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lbl_listview"/>
+
+    <Button
+        android:id="@+id/btnImageUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_image_upload"/>
+
 </LinearLayout>
