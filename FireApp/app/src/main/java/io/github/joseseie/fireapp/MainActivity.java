@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Intent intent = new Intent(this, clas);
         startActivity( intent );
 
-        Toast.makeText(this, msg , Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, msg , Toast.LENGTH_LONG).show();
     }
 
 }

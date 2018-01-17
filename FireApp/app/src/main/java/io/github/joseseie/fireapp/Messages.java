@@ -11,7 +11,7 @@ public class Messages {
 
     public static void toast(Context context, String msg)
     {
-        Toast.makeText(context, "Login" , Toast.LENGTH_LONG).show();
+        Toast.makeText(context, msg , Toast.LENGTH_LONG).show();
     }
 
 }
