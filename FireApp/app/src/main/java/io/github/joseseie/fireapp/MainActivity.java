@@ -1,5 +1,6 @@
 package io.github.joseseie.fireapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,101 +21,48 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
-    private EditText mVaueField, mKeyValue;
-    private TextView mValueView;
-    private Button btnSendData;
-
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference  databaseReference;
+    Button btnSaveToFirebase, btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseApp.initializeApp(this);
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference();
+        btnSaveToFirebase   = (Button) findViewById(R.id.btnSaveToFirebase);
+        btnLogin            = (Button) findViewById(R.id.btnLogin);
 
-        mValueView = (TextView) findViewById(R.id.mValueView);
-        mKeyValue  = (EditText) findViewById(R.id.keyValue);
-        mVaueField = (EditText) findViewById(R.id.valueField);
-        btnSendData = (Button) findViewById(R.id.btnSendData);
-        btnSendData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String value = mVaueField.getText().toString();
-                String key = mKeyValue.getText().toString();
-
-                databaseReference
-//                        .child(Helper.TABLE_USER) //Table name
-                        .child( key ) //Key name
-//                        .child(Helper.USER_profession) //Column(s)
-                        .setValue( value ); //Val
-
-                //Datasnipshoot
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        StringBuilder value = new StringBuilder();
-
-                        Log.v("E_VALUE","Data:" + dataSnapshot.getValue());
-
-                        for (DataSnapshot objSnap : dataSnapshot.getChildren())
-                        {
-                            value.append(objSnap.getValue( String.class ));
-                            value.append("\n");
-                        }
-
-
-                        mValueView.setText( value.toString() );
-
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-
-                databaseReference.addChildEventListener(new ChildEventListener() {
-                    @Override
-                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                        Toast.makeText(MainActivity.this,"Child added",Toast.LENGTH_LONG).show();
-
-                    }
-
-                    @Override
-                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-                        Toast.makeText(MainActivity.this,"Child Charged",Toast.LENGTH_LONG).show();
-
-                    }
-
-                    @Override
-                    public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-                        Toast.makeText(MainActivity.this,"Child Removed",Toast.LENGTH_LONG).show();
-
-                    }
-
-                    @Override
-                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-
-            }
-        });
+        btnLogin.setOnClickListener(this);
+        btnSaveToFirebase.setOnClickListener(this);
 
     }
+
+    @Override
+    public void onClick(View view) {
+        String msg = "Nada foi clicado.";
+        if (view == btnLogin)
+        {
+            msg = "Clicou btnLogin";
+            this.startMyActivity( msg, Login.class );
+
+        }
+        else if (view == btnSaveToFirebase)
+        {
+            msg = "Clicou btnSaveToFirebase";
+            this.startMyActivity( msg, SaveToFirebaseActivity.class );
+
+        }
+
+
+    }
+
+    private void startMyActivity(String msg, Class<?> clas)
+    {
+        Intent intent = new Intent(this, clas);
+        startActivity( intent );
+
+        Toast.makeText(this, msg , Toast.LENGTH_LONG).show();
+    }
+
 }
