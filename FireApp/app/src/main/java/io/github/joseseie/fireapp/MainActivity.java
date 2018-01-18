@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         btnImageUpload.setOnClickListener(this);
         btnImageUploadShow.setOnClickListener(this);
         btnAudeoRecorder.setOnClickListener(this);
+        btnGoogleSignIn.setOnClickListener(this);
 
     }
 
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         else if (view == btnGoogleSignIn)
         {
             msg = "Clicou btnImageUploadShow";
-            this.startMyActivity( msg, AudeoRecorderActivity.class );
+            this.startMyActivity( msg, GoogleSignInActivity.class );
 
         }
         else if (view == btnOfflineCapable)

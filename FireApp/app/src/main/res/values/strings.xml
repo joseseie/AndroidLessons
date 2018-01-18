@@ -13,5 +13,6 @@
     <string name="lbl_email">Email</string>
     <string name="lbl_password">Password</string>
     <string name="lbl_loged">User Loged In</string>
+    <string name="lbl_logout">LogOut</string>
     <string name="lbl_info_record">Precione o botao sem largar para gravar</string>
 </resources>
