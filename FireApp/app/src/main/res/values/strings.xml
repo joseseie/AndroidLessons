@@ -5,6 +5,7 @@
     <string name="lbl_key">Key</string>
     <string name="lbl_listview">List View</string>
     <string name="lbl_image_upload">Image Upload</string>
+    <string name="lbl_image_upload_show">Capture and Upload</string>
     <string name="lbl_login">SIGN UP</string>
     <string name="lbl_email">Email</string>
     <string name="lbl_password">Password</string>

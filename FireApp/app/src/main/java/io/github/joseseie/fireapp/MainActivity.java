@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
-    Button btnSaveToFirebase, btnLogin, btnListView, btnImageUpload;
+    Button btnSaveToFirebase, btnLogin, btnListView, btnImageUpload, btnImageUploadShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +32,15 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         btnSaveToFirebase   = (Button) findViewById(R.id.btnSaveToFirebase);
         btnLogin            = (Button) findViewById(R.id.btnLogin);
+        btnListView         = (Button) findViewById(R.id.btnListView);
+        btnImageUpload      = (Button) findViewById(R.id.btnImageUpload);
+        btnImageUploadShow  = (Button) findViewById(R.id.btnDataUpload);
 
         btnLogin.setOnClickListener(this);
         btnSaveToFirebase.setOnClickListener(this);
         btnListView.setOnClickListener(this);
         btnImageUpload.setOnClickListener(this);
+        btnImageUploadShow.setOnClickListener(this);
 
     }
 
@@ -63,8 +67,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
         else if (view == btnImageUpload)
         {
-            msg = "Clicou btnSaveToFirebase";
+            msg = "Clicou btnImageUpload";
             this.startMyActivity( msg, ImageUploadActivity.class );
+
+        }
+        else if (view == btnImageUploadShow)
+        {
+            msg = "Clicou btnSaveToFirebase";
+            this.startMyActivity( msg, UploadDataActivity.class );
 
         }
 
