@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         else if (view == btnAudeoRecorder)
         {
             msg = "Clicou btnImageUploadShow";
-            this.startMyActivity( msg, UploadDataActivity.class );
+            this.startMyActivity( msg, AudeoRecorderActivity.class );
 
         }
 
