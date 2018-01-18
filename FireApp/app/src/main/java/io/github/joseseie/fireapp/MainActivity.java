@@ -23,7 +23,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
-    Button btnSaveToFirebase, btnLogin, btnListView, btnImageUpload, btnImageUploadShow,btnAudeoRecorder;
+    Button btnSaveToFirebase, btnLogin, btnListView, btnImageUpload,
+            btnImageUploadShow,btnAudeoRecorder, btnGoogleSignIn,btnOfflineCapable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         btnImageUpload      = (Button) findViewById(R.id.btnImageUpload);
         btnImageUploadShow  = (Button) findViewById(R.id.btnDataUpload);
         btnAudeoRecorder    = (Button) findViewById(R.id.btnAudeoRecorder);
+        btnGoogleSignIn     = (Button) findViewById(R.id.btnGoogleSignIn);
 
         btnLogin.setOnClickListener(this);
         btnSaveToFirebase.setOnClickListener(this);
@@ -82,6 +84,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         else if (view == btnAudeoRecorder)
         {
             msg = "Clicou btnImageUploadShow";
+            this.startMyActivity( msg, AudeoRecorderActivity.class );
+
+        }
+        else if (view == btnGoogleSignIn)
+        {
+            msg = "Clicou btnImageUploadShow";
+            this.startMyActivity( msg, AudeoRecorderActivity.class );
+
+        }
+        else if (view == btnOfflineCapable)
+        {
+            msg = "Clicou btnOfflineCapable";
             this.startMyActivity( msg, AudeoRecorderActivity.class );
 
         }
