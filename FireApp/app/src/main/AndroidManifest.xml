@@ -3,6 +3,7 @@
     package="io.github.joseseie.fireapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".FireApp"
@@ -12,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ImageUploadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +24,7 @@
         <activity android:name=".Login" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".ListViewActivity" />
-        <activity android:name=".ImageUploadActivity"></activity>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
