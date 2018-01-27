@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.joseseie.projectsimpleblogapp.PostActivity">
+
+    <ImageButton
+        android:id="@+id/imageSelect"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="2dp" />
+
+    <EditText
+        android:id="@+id/titleField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageSelect"
+        android:layout_alignStart="@+id/imageSelect"
+        android:layout_below="@+id/imageSelect"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/input_outline"
+        android:ems="10"
+        android:hint="Post Title..."
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/desField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/titleField"
+        android:layout_alignLeft="@+id/titleField"
+        android:layout_alignRight="@+id/titleField"
+        android:layout_alignStart="@+id/titleField"
+        android:layout_below="@+id/titleField"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/input_outline"
+        android:ems="10"
+        android:hint="Post Description .. . "
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimary"
+        android:text="Submit Post"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
