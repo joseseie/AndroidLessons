@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Post Description goes here"
-            android:textSize="16ps" />
+            android:textSize="16sp" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

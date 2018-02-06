@@ -37,18 +37,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        FirebaseRecyclerAdapter<Blog, BlogViewHolder> f = new FirebaseRecyclerAdapter<Blog, blogViewHolder>(
-            Blog.class,
-            R.layout.blog_row,
-            BlogViewHolder.class,
-            mDatabase
-        ){
-            public void populateViewHolder(BlogViewHolder viewHolder, Blog blog, int position)
-            {
-                viewHolder.setTitle(blog.getTitle());
-                viewHolder.setDesc(blog.getDesc());
-            }
-        };
+//        FirebaseRecyclerAdapter<Blog, BlogViewHolder> f = new FirebaseRecyclerAdapter<Blog, blogViewHolder>(
+//            Blog.class,
+//            R.layout.blog_row,
+//            BlogViewHolder.class,
+//            mDatabase
+//        ){
+//            public void populateViewHolder(BlogViewHolder viewHolder, Blog blog, int position)
+//            {
+//                viewHolder.setTitle(blog.getTitle());
+//                viewHolder.setDesc(blog.getDesc());
+//            }
+//        };
 
 
 //        mBlogList.setAdapter();
